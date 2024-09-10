@@ -1,6 +1,8 @@
 
 # Morphing d'image
-##Projet Java ING1 S2 
+
+## Projet Java ING1 S2 
+
 Ce projet consiste à produire un morphing d'images, une technique qui permet de transformer progressivement une image de départ en une image d'arrivée en utilisant des points de contrôle. 
 Ces points de contrôle sont placés sur les images pour guider la transformation. 
 Le résultat final est un GIF animé qui illustre cette transition de manière fluide et dynamique, montrant chaque étape de la transformation guidée par les points de contrôle.
