@@ -1,38 +1,38 @@
 
-# Morphing d'image
+# Image morphing
 
-## Projet Java ING1 S2 
+## Project Java ING1 S2 
 
-Ce projet consiste à produire un morphing d'images, une technique qui permet de transformer progressivement une image de départ en une image d'arrivée en utilisant des points de contrôle. 
-Ces points de contrôle sont placés sur les images pour guider la transformation. 
-Le résultat final est un GIF animé qui illustre cette transition de manière fluide et dynamique, montrant chaque étape de la transformation guidée par les points de contrôle.
+This project involves image morphing, a technique that gradually transforms a source image into a target image using control points. 
+These control points are placed on the images to guide the transformation. 
+The end result is an animated GIF that illustrates this transition in a fluid and dynamic way, showing each stage of the transformation guided by the control points.
 
-L'application se compose de 3 morphings différents :
-* un morphing de formes simples : on traite des lignes brisées et la transition se fait en déplaçant linéairement les points de contrôles.
-* un morphing de formes arrondies : on traite des courbes et la transition reste la même. 
-* un morphing d'images : en utilisant la méthode de triangulation de Delaunay.
+The application comprises 3 different morphs:
+* simple shape morphing: broken lines are processed, and the transition is made by moving the control points linearly.
+* round shape morphing: curves are processed, and the transition remains the same. 
+* image morphing: using Delaunay's triangulation method.
 
 ***
 
-## Sommaire
+## Table of contents
 
-1. Pré-requis
-2. Déploiement
+1. Prerequisites
+2. Deployment
 3. Instructions
-4. Exemples d'utilisation
+4. Examples of use
 5. Documentation
-6. Technologies utilisées
+6. Technologies used
    
 ***
 
-## Pré-requis
+## Prerequisites
 
-Installer les dépendances javafx.controls, fxml, graphics, swing. 
+Install javafx.controls, fxml, graphics, swing dependencies. 
 ***
 
-## Déploiement
+## Deployment
 
-Écrire la ligne suivante dans VM arguments de Run Configurations :
+Write the following line in VM Run Configurations arguments:
 
 ```bash
 --module-path /home/cytech/Desktop/Java/openjfx-22_linux-x64_bin-sdk/javafx-sdk-22/lib --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.swing
@@ -40,31 +40,31 @@ Installer les dépendances javafx.controls, fxml, graphics, swing.
 
 ## Instructions
 
-### Choix des images 
-Pour chacun des types de morphisme, l'utilisateur peut choisir son image de début et de fin en cliquant respectivement sur "Choisir l'image de gauche" et "Choisir l'image de droite". 
-Attention, le nom de l'image ne doit pas comporter d'espaces et les extensions acceptées sont : png et jpg. 
-Pour tester l'application, si besoin, vous trouverez des images dans le dossier Annexes/ImagesPourTester/.
+### Image selection 
+For each type of morphism, users can choose their start and end images by clicking on “Choose left image” and “Choose right image” respectively. 
+Please note that the image name must not include spaces, and the extensions accepted are: png and jpg. 
+To test the application, if required, you'll find images in the Annexes/ImagesPourTester/ folder.
 
-### Points de contrôle 
-- Pour le morphing simple : l'utilisateur peut ajouter des points sur l'image de gauche et les équivalents apparaissent sur l'image de droite. Sur cette dernière, l'utilisateur peut déplacer les points pour les positionner selon la forme de fin. Il est recommandé de positionner les points sur les sommets ou les arêtes des formes. 
+### Control points 
+- For simple morphing: the user can add points to the left-hand image, and the equivalent points appear on the right-hand image. On the latter, the user can move the points to position them according to the end shape. It is recommended to position points on the vertices or edges of shapes. 
 
-- Pour le morphing arrondi, les points de contrôle classique fonctionnent de la même manière que pour le morphing simple. En plus, il y a l'ajout de deux points intermédiaires entre deux points de contrôle. Ces derniers apparaissent sur les deux images et permettent de dessiner de la courbure de la courbe. L'utilisateur doit déplacer ces points intermédiaires pour faire correspondre la courbure de la ligne généré avec la courbure de la forme arrondie de l'image. Pour plus de précision, il est également nécessaire de décomposer la courbe de la forme arrondie en plusieurs points de contrôle.
-
-- Pour le morphing d'images, les points de contrôles fonctionnent comme pour le morphing simple. Il est recommandé de positionner les points sur des éléments caractéristiques de l'image, sur le sujet qui va être transformé. Par exemple, pour des visages, placez les points sur les yeux, le nez, les oreilles, ou encore le haut et le bas du visage.
+- For rounded morphing, the classic control points work in the same way as for simple morphing. In addition, two intermediate points are added between two control points. These appear on both images and are used to draw the curvature of the curve. The user must move these intermediate points to match the curvature of the generated line with the curvature of the rounded shape of the image. For greater precision, it is also necessary to break down the curvature of the rounded shape into several control points.
+  
+- For image morphing, control points work in the same way as for simple morphing. We recommend positioning the points on characteristic elements of the image, on the subject to be transformed. For example, for faces, place the points on the eyes, nose, ears, or top and bottom of the face.
 
 ***
 
-## Exemples d'utilisation
+## Examples of use
 
-Exemple d'un morphing entre une forme simple rectangulaire vers une forme simple triangulaire :
+Example of morphing from a simple rectangular shape to a simple triangular shape:
 
 ![](https://github.com/BaptistePlautA/ProjetGL3/blob/Lukas/simple.gif)
 
-Exemple d'un morphing de formes arrondies entre un coeur et une croix :
+Example of a morphing of rounded shapes between a heart and a cross:
 
 ![](https://github.com/BaptistePlautA/ProjetGL3/blob/Lukas/arrondi.gif)
 
-Exemple d'un morphing d'images entre deux tableaux de Van Gogh :
+Example of image morphing between two Van Gogh paintings:
 
 ![](https://github.com/BaptistePlautA/ProjetGL3/blob/Lukas/van_gogh.gif)
 ***
@@ -78,9 +78,9 @@ Exemple d'un morphing d'images entre deux tableaux de Van Gogh :
 [JavaFX](https://docs.oracle.com/javase/8/javafx/api/toc.html)
 
 ***
-## Technologies utilisées
+## Technologies used
 
-Ci-après une liste des différentes technologies utilisées pour notre projet :
+The following is a list of the different technologies used in our project:
 * [Eclipse](https://eclipseide.org/): Version 2023-03 (4.27.0)
 * [java](https://www.java.com/fr/): Version 17.0.6
 * [javaFX](https://openjfx.io/): Version 22.0.0
